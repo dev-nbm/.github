@@ -1,0 +1,110 @@
+name: Feature request
+description: Propose a new feature or a change to an existing one
+title: "[Feature] "
+labels: ["type:feature"]
+projects: ["dev-nbm/2"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        File features in the hub repo, [dev-nbm/earo](https://github.com/dev-nbm/earo). Per-repo work is added later as sub-issues.
+        No branch or code until this issue is triaged and in **Prioritized** on the [EARO board](https://github.com/users/dev-nbm/projects/2).
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / goal
+      description: What problem does this solve, and for whom? What outcome do we want?
+      placeholder: "SMB owners drop off at checkout because they can't pay with Mada..."
+    validations:
+      required: true
+  - type: dropdown
+    id: persona
+    attributes:
+      label: Persona
+      multiple: true
+      options:
+        - Digital-native SMB
+        - SMB owner-operator
+        - Mid-market marketing manager
+        - Enterprise brand lead
+        - Agency reseller
+        - Internal (admin, QA, ops)
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Dashboard mode
+      options:
+        - Express
+        - Pro
+        - Both
+        - Not applicable (landing, admin, help, backend only)
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What's in and what's explicitly out.
+      value: |
+        **In:**
+        -
+
+        **Out:**
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How we'll know it's done. One checkable line each.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: checkboxes
+    id: repos
+    attributes:
+      label: Affected repos
+      options:
+        - label: admanager_frontend (dashboard)
+        - label: admanager_backend
+        - label: admanager_landing (earo.ai)
+        - label: earo_admin
+        - label: earo_help
+        - label: earo_shopify
+  - type: input
+    id: design
+    attributes:
+      label: Design link
+      description: Figma, Claude Design or mockup link. Required if there's UI.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Proposed priority
+      description: Confirmed at triage.
+      options:
+        - P0 (prod down, money wrong)
+        - P1 (this iteration)
+        - P2 (next iteration or two)
+        - P3 (someday)
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Proposed size
+      options:
+        - XS (under half a day)
+        - S (1 day)
+        - M (2-3 days)
+        - L (a week)
+        - XL (more than a week)
+        - Not sure yet
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Links, data, customer quotes, related issues.

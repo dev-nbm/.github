@@ -1,0 +1,87 @@
+name: Bug report
+description: Something is broken or behaves wrongly
+title: "[Bug] "
+labels: ["type:bug"]
+projects: ["dev-nbm/2"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        File bugs in the hub repo, [dev-nbm/earo](https://github.com/dev-nbm/earo). If you're not sure where the bug lives, that's fine: it gets routed at triage.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What's wrong
+      description: One or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Production
+        - Staging
+        - Both
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where
+      options:
+        - Dashboard (app.earo.ai), Express
+        - Dashboard (app.earo.ai), Pro
+        - Landing site (earo.ai)
+        - Admin panel
+        - Help center
+        - Shopify app
+        - Emails / notifications
+        - Payments / billing
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: account
+    attributes:
+      label: Account and role
+      description: Which user/org and role (owner, editor, viewer, agency, superadmin). No passwords.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, video or logs
+      description: Drag files in here.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Proposed priority
+      description: Confirmed at triage.
+      options:
+        - P0 (prod down, money wrong)
+        - P1 (this iteration)
+        - P2 (next iteration or two)
+        - P3 (someday)
+    validations:
+      required: true
