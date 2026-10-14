@@ -2,7 +2,7 @@ name: Bug report
 description: Something is broken or behaves wrongly
 title: "[Bug] "
 labels: ["type:bug"]
-projects: ["dev-nbm/2"]
+projects: ["dev-nbm/4"]
 body:
   - type: markdown
     attributes:

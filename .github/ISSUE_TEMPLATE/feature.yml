@@ -2,13 +2,13 @@ name: Feature request
 description: Propose a new feature or a change to an existing one
 title: "[Feature] "
 labels: ["type:feature"]
-projects: ["dev-nbm/2"]
+projects: ["dev-nbm/4"]
 body:
   - type: markdown
     attributes:
       value: |
         File features in the hub repo, [dev-nbm/earo](https://github.com/dev-nbm/earo). Per-repo work is added later as sub-issues.
-        No branch or code until this issue is triaged and in **Prioritized** on the [EARO board](https://github.com/users/dev-nbm/projects/2).
+        No branch or code until this issue is triaged and in **Prioritized** on the [EARO board](https://github.com/users/dev-nbm/projects/4).
   - type: textarea
     id: problem
     attributes:
